@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000; /* Dark background */
+    color: #FFFFFF; /* White text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+ 
+.chat-container {
+    width: 400px;
+    border: 1px solid #AAB8C2; /* Light gray border */
+    border-radius: 10px;
+    overflow: hidden;
+}
+ 
+.chat-box {
+    background-color: #15202B; /* Dark gray background */
+    height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+}
+ 
+.message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 70%;
+}
+ 
+.bot {
+    background-color: #1DA1F2; /* Twitter blue for bot messages */
+    color: #FFFFFF;
+    align-self: flex-start;
+}
+ 
+.user {
+    background-color: #657786; /* Light gray for user messages */
+    color: #FFFFFF;
+    align-self: flex-end;
+}
+ 
+.chat-input-container {
+    display: flex;
+    background-color: #192734; /* Slightly darker gray */
+    padding: 10px;
+    border-top: 1px solid #AAB8C2; /* Light gray border */
+}
+ 
+#chat-input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    color: #FFFFFF;
+    background-color: #253341; /* Dark input background */
+}
+ 
+#send-btn {
+    background-color: #1DA1F2; /* Twitter blue */
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 15px;
+    margin-left: 10px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+ 
+#send-btn:hover {
+    background-color: #1A91DA; /* Slightly darker blue on hover */
+}
