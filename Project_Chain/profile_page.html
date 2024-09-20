@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profilepage Layout</title>
+    <link rel="stylesheet" href="home_page_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Left Sidebar for Menu Button, Logo, and Menu Items -->
+        <div class="left-sidebar">
+            <button class="menu-btn" onclick="toggleMenu()">
+                <span class="bar bar1"></span>
+                <span class="bar bar2"></span>
+                <span class="bar bar3"></span>
+            </button>
+
+            <div class="logo-container">
+                <img src="mini_logo.jpg" alt="Logo" class="logo" width="100px" height="100px">
+            </div>
+
+            <img src="leaderboard.jpg" width="300px">
+            <div class="menu-items">
+                <h2>Menu</h2>
+                <button class="btn" onclick="toggleDropdown('events')">Events</button>
+                <ul id="events-list" class="dropdown-list hidden">
+                    <li>Event 1</li>
+                    <li>Event 2</li>
+                    <li>Event 3</li>
+                </ul>
+
+                <button class="btn" onclick="toggleDropdown('certifications')">Certifications</button>
+                <ul id="certifications-list" class="dropdown-list hidden">
+                    <li>Certification 1</li>
+                    <li>Certification 2</li>
+                </ul>
+
+                <button class="btn" onclick="toggleDropdown('points')">Points</button>
+                <ul id="points-list" class="dropdown-list hidden">
+                    <li>Point 1</li>
+                    <li>Point 2</li>
+                </ul>
+
+                <button class="btn">Attendance</button>
+                <button class="btn">Classes</button>
+                <button class="btn">Courses</button>
+                <button class="btn">People</button>
+                <button class="btn">Log Out</button>
+            </div>
+        </div>
+
+        <!-- Center Section for Posts like Twitter -->
+        <div class="main-content">
+            <div class="top_bar">
+                <div class="search-container">
+                    <input type="text" id="search-bar" placeholder="Search">
+                    <div class="button-group">
+                        <a href="landing_page.html"><button class="button-18" role="button"><i class="fas fa-home"></i></button></a>
+                        <button class="button-19" role="button"><i class="fas fa-coins"></i></button>
+                        <button class="button-18" role="button"><i class="fas fa-gift"></i></button>
+                        <a href="grp_chat.html"><button class="button-18" role="button"><i class="fas fa-comments"></i></button></a>
+                        <a href="profile_page.html"><button class="button-18" role="button"><i class="fas fa-user"></i></button></a>
+                    </div>
+                </div>
+            </div>
+
+            <header class="profile-header">
+                <div class="profile-cover">
+                    <img src="Banner.png" alt="Cover Photo" class="cover-photo">
+                </div>
+                <div class="profile-info">
+                    <img src="81212.JPG" alt="Profile Photo" class="profile-photo">
+                    <h1 class="profile-name">Madhav Naga Sri Ram Mattaparthi</h1>
+                    <h2 class="profile-title">Software Engineer | Web Developer</h2>
+                    <p class="profile-summary">I am deeply passionate about building innovative software solutions that
+                        positively impact people's lives.</p>
+                    <hr>
+                </div>
+            </header>
+
+            <div class="post">
+                <h3>Certificates</h3><br>
+                <ul>
+                    <li>NPTEL - Cloud Computing</li><br>
+                    <li>ORACLE ACADEMY - Java, DBMS</li><br>
+                    <li>CISCO - C, Data Analytics, Python, Network Essentials</li>
+                </ul>
+            </div>
+
+            <div class="post">
+                <h3>Skills</h3>
+                <div class="rating-container">
+                    <ul type="disc">
+                        <li>
+                            <div class="text">HTML, CSS, JavaScript</div>
+                        </li>
+                    </ul>
+                    <div class="stars">
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star1">&#9733;</span>
+                    </div>
+                </div>
+                <div class="rating-container">
+                    <ul type="disc">
+                        <li>
+                            <div class="text">Python</div>
+                        </li>
+                    </ul>
+                    <div class="stars">
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star1">&#9733;</span>
+                        <span class="star1">&#9733;</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Sidebar for Images -->
+        <div class="right-sidebar">
+            <img src="leader.png" alt="Image 1">
+            <img src="whats_happening.jpg" alt="Image 2" height="400px">
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const sidebar = document.querySelector('.left-sidebar');
+            sidebar.classList.toggle('collapsed');
+        }
+
+        function toggleDropdown(listId) {
+            const list = document.getElementById(`${listId}-list`);
+            list.classList.toggle('hidden');
+        }
+    </script>
+</body>
+
+</html>
